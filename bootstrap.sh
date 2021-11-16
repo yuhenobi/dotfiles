@@ -6,6 +6,7 @@ brew cleanup && brew cask cleanup
 
 # Oh My Zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+mkdir ~/.nvm
 
 # Linking dotfiles
 rm ~/.gitconfig ~/.gitignore_global ~/.zshrc
