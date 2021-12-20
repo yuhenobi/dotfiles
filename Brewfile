@@ -26,6 +26,7 @@ brew "youtube-dl"
 cask "appcleaner"
 cask "dash"
 cask "google-chrome"
+cask "figma"
 cask "font-inconsolata"
 cask "font-inconsolata-for-powerline"
 cask "font-fira-code"
@@ -59,9 +60,11 @@ cask "quicklook-json"
 # Applications from Mac App Store
 mas "1Password 7 - Password Manager", id: 1333542190
 mas "AdGuard for Safari", id: 1440147259
+mas "Bitwarden", id: 1352778147
 mas "Slack", id: 803453959
 mas "Spark – Email App by Readdle", id: 1176895641
 mas "Telegram", id: 747648890
+mas "Trello", id: 1278508951
 mas "Twitter", id: 409789998
 mas "The Unarchiver", id: 425424353
 mas "Whatsapp", id: 1147396723
