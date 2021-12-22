@@ -27,24 +27,17 @@ cask "appcleaner"
 cask "dash"
 cask "google-chrome"
 cask "figma"
-cask "font-inconsolata"
-cask "font-inconsolata-for-powerline"
-cask "font-fira-code"
-cask "font-fira-code-for-powerline"
-cask "font-inter"
 cask "gimp"
 cask "hiddenbar"
 cask "iterm2"
-cask "kindle"
 cask "monitorcontrol"
 cask "obsidian"
 cask "paragon-ntfs"
 cask "postman"
+cask "pritunl"
 cask "radio-silence"
 cask "rectangle"
 cask "sourcetree"
-cask "sketch"
-cask "spark"
 cask "spotify"
 cask "tableplus"
 cask "transmission"
@@ -58,11 +51,8 @@ cask "zoom"
 cask "quicklook-json"
 
 # Applications from Mac App Store
-mas "1Password 7 - Password Manager", id: 1333542190
-mas "AdGuard for Safari", id: 1440147259
 mas "Bitwarden", id: 1352778147
 mas "Slack", id: 803453959
-mas "Spark – Email App by Readdle", id: 1176895641
 mas "Telegram", id: 747648890
 mas "Trello", id: 1278508951
 mas "Twitter", id: 409789998
