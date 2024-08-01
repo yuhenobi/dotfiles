@@ -1,30 +1,19 @@
 #!/bin/bash
 
 if type xcode-select >&- && xpath=$( xcode-select --print-path ) &&
-   test -d "${xpath}" && test -x "${xpath}" ; 
+   test -d "${xpath}" && test -x "${xpath}";
 then
    echo "Command Line Tools already Installed"
 else
-   sudo softwareupdate -i "Command Line Tools for Xcode-13.2"
-fi
-
-# Rosetta
-processor=$(/usr/sbin/sysctl -n machdep.cpu.brand_string | grep -o \"Intel\")
-if [[ -n "$processor" ]]; then
-    	echo 'Intel CPU, no need to install Rosetta'
-else
-	if [[ "`pkgutil --files com.apple.pkg.RosettaUpdateAuto`" == "" ]]
-	then 
-		sudo softwareupdate --install-rosetta
-	else
-		echo 'Rosetta already installed'
-	fi 
+   sudo rm -rf /Library/Developer/CommandLineTools
+   sudo xcode-select --install
 fi
 
 # Git
-rm ~/.gitconfig ~/.gitignore_global 
+rm ~/.gitconfig ~/.gitignore_global
 ln -s $PWD/.gitconfig ~/.gitconfig
 ln -s $PWD/.gitignore_global ~/.gitignore_global
+ln -s $PWD/.nanorc ~/.nanorc
 
 # Install Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

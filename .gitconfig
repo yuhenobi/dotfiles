@@ -1,33 +1,43 @@
-[core]
-	excludesfile = /Users/yuhenobi/.gitignore_global
-	editor = nano -w
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[includeIf "gitdir:~/Private/"]
+  path = ~/.gitconfig-private
+
+[includeIf "gitdir:~/Work/"]
+  path = ~/.gitconfig-work
+
 [init]
 	defaultBranch = main
+
 [user]
 	name = Vasilii Borisov
-	email = obi@yuhen.ru
+	email = obi@yuhen.org
 	username = yuhenobi
+
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = nano -w
+
+[diff]
+    tool = vimdiff
+
 [color]
 	ui = auto
+
 [color "branch"]
 	current = yellow bold
 	local = green bold
 	remote = cyan bold
+
 [color "diff"]
 	meta = yellow bold
 	frag = magenta bold
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+
 [color "status"]
 	added = green bold
 	changed = yellow bold
 	untracked = red bold
+
 [github]
 	user = yuhenobi

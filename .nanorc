@@ -1,0 +1,7 @@
+include "/opt/homebrew/share/nano/*.nanorc"
+
+set linenumbers
+set constantshow
+set autoindent
+set indicator
+set tabstospaces

@@ -1,4 +1,4 @@
-# Quick start
+у# Quick start
 Run that on the Terminal:
 ```
 git clone https://github.com/yuhenobi/dotfiles.git ~/.dotfiles
