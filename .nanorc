@@ -1,4 +1,4 @@
-include "/opt/homebrew/share/nano/*.nanorc"
+include "/usr/local/share/nano/*.nanorc"
 
 set linenumbers
 set constantshow

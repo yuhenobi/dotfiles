@@ -1,24 +1,13 @@
 #!/bin/bash
 
-if type xcode-select >&- && xpath=$( xcode-select --print-path ) &&
-   test -d "${xpath}" && test -x "${xpath}";
-then
-   echo "Command Line Tools already Installed"
-else
-   sudo rm -rf /Library/Developer/CommandLineTools
-   sudo xcode-select --install
-fi
-
 # Git
-rm ~/.gitconfig ~/.gitignore_global
+rm ~/.gitconfig ~/.gitignore_global ~/.nanorc
 ln -s $PWD/.gitconfig ~/.gitconfig
 ln -s $PWD/.gitignore_global ~/.gitignore_global
 ln -s $PWD/.nanorc ~/.nanorc
 
 # Install Brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-rm ~/.zprofile
-ln -s $PWD/.zprofile ~/.zprofile
 
 export PATH=/opt/homebrew/bin:$PATH
 
@@ -32,11 +21,8 @@ brew bundle
 brew cleanup
 
 # Install Oh My Zsh
+rm -rf ~/.oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-
-if [ ! -d ~/.nvm ]; then
-    mkdir ~/.nvm
-fi
 
 # Linking dotfiles to home directory
 rm ~/.zshrc
